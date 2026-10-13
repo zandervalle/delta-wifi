@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSLocationUsageDescription</key>
+	<string>Die App benötigt die Ortungsfreigabe, damit macOS anzeigt, mit welchem WLAN-Knoten der Mac verbunden ist.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Die App benötigt die Ortungsfreigabe, damit macOS anzeigt, mit welchem WLAN-Knoten der Mac verbunden ist.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Die App misst Paketverlust und Antwortzeiten zur FRITZ!Box und auf Wunsch den Durchsatz zu einem iperf3-Server im Heimnetz.</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>WLAN-Projekt</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>de.mhs131.netmap.wlanprojekt</string>
+			</array>
+		</dict>
+	</array>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeIdentifier</key>
+			<string>de.mhs131.netmap.wlanprojekt</string>
+			<key>UTTypeDescription</key>
+			<string>WLAN-Projekt</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.json</string>
+			</array>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>wlanprojekt</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

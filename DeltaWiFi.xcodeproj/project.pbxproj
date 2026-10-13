@@ -12,37 +12,37 @@
 			containerPortal = 11450D10307C1C79009F0D0E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 11450D17307C1C79009F0D0E;
-			remoteInfo = NetMap;
+			remoteInfo = DeltaWiFi;
 		};
 		11450D30307C1C7B009F0D0E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 11450D10307C1C79009F0D0E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 11450D17307C1C79009F0D0E;
-			remoteInfo = NetMap;
+			remoteInfo = DeltaWiFi;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11450D18307C1C79009F0D0E /* NetMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		11450D25307C1C7B009F0D0E /* NetMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		11450D2F307C1C7B009F0D0E /* NetMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11450D18307C1C79009F0D0E /* DELTA Wi-Fi Analyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DELTA Wi-Fi Analyzer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11450D25307C1C7B009F0D0E /* DeltaWiFiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeltaWiFiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11450D2F307C1C7B009F0D0E /* DeltaWiFiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeltaWiFiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		11450D1A307C1C79009F0D0E /* NetMap */ = {
+		11450D1A307C1C79009F0D0E /* DeltaWiFi */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = NetMap;
+			path = DeltaWiFi;
 			sourceTree = "<group>";
 		};
-		11450D28307C1C7B009F0D0E /* NetMapTests */ = {
+		11450D28307C1C7B009F0D0E /* DeltaWiFiTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = NetMapTests;
+			path = DeltaWiFiTests;
 			sourceTree = "<group>";
 		};
-		11450D32307C1C7B009F0D0E /* NetMapUITests */ = {
+		11450D32307C1C7B009F0D0E /* DeltaWiFiUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = NetMapUITests;
+			path = DeltaWiFiUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,9 +69,9 @@
 		11450D0F307C1C79009F0D0E = {
 			isa = PBXGroup;
 			children = (
-				11450D1A307C1C79009F0D0E /* NetMap */,
-				11450D28307C1C7B009F0D0E /* NetMapTests */,
-				11450D32307C1C7B009F0D0E /* NetMapUITests */,
+				11450D1A307C1C79009F0D0E /* DeltaWiFi */,
+				11450D28307C1C7B009F0D0E /* DeltaWiFiTests */,
+				11450D32307C1C7B009F0D0E /* DeltaWiFiUITests */,
 				11450D19307C1C79009F0D0E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,9 +79,9 @@
 		11450D19307C1C79009F0D0E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11450D18307C1C79009F0D0E /* NetMap.app */,
-				11450D25307C1C7B009F0D0E /* NetMapTests.xctest */,
-				11450D2F307C1C7B009F0D0E /* NetMapUITests.xctest */,
+				11450D18307C1C79009F0D0E /* DELTA Wi-Fi Analyzer.app */,
+				11450D25307C1C7B009F0D0E /* DeltaWiFiTests.xctest */,
+				11450D2F307C1C7B009F0D0E /* DeltaWiFiUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,9 +89,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		11450D17307C1C79009F0D0E /* NetMap */ = {
+		11450D17307C1C79009F0D0E /* DeltaWiFi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11450D37307C1C7B009F0D0E /* Build configuration list for PBXNativeTarget "NetMap" */;
+			buildConfigurationList = 11450D37307C1C7B009F0D0E /* Build configuration list for PBXNativeTarget "DeltaWiFi" */;
 			buildPhases = (
 				11450D14307C1C79009F0D0E /* Sources */,
 				11450D15307C1C79009F0D0E /* Frameworks */,
@@ -100,16 +100,16 @@
 			buildRules = (
 			);
 			fileSystemSynchronizedGroups = (
-				11450D1A307C1C79009F0D0E /* NetMap */,
+				11450D1A307C1C79009F0D0E /* DeltaWiFi */,
 			);
-			name = NetMap;
-			productName = NetMap;
-			productReference = 11450D18307C1C79009F0D0E /* NetMap.app */;
+			name = DeltaWiFi;
+			productName = DeltaWiFi;
+			productReference = 11450D18307C1C79009F0D0E /* DELTA Wi-Fi Analyzer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		11450D24307C1C7B009F0D0E /* NetMapTests */ = {
+		11450D24307C1C7B009F0D0E /* DeltaWiFiTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11450D3A307C1C7B009F0D0E /* Build configuration list for PBXNativeTarget "NetMapTests" */;
+			buildConfigurationList = 11450D3A307C1C7B009F0D0E /* Build configuration list for PBXNativeTarget "DeltaWiFiTests" */;
 			buildPhases = (
 				11450D21307C1C7B009F0D0E /* Sources */,
 				11450D22307C1C7B009F0D0E /* Frameworks */,
@@ -121,16 +121,16 @@
 				11450D27307C1C7B009F0D0E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				11450D28307C1C7B009F0D0E /* NetMapTests */,
+				11450D28307C1C7B009F0D0E /* DeltaWiFiTests */,
 			);
-			name = NetMapTests;
-			productName = NetMapTests;
-			productReference = 11450D25307C1C7B009F0D0E /* NetMapTests.xctest */;
+			name = DeltaWiFiTests;
+			productName = DeltaWiFiTests;
+			productReference = 11450D25307C1C7B009F0D0E /* DeltaWiFiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		11450D2E307C1C7B009F0D0E /* NetMapUITests */ = {
+		11450D2E307C1C7B009F0D0E /* DeltaWiFiUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11450D3D307C1C7B009F0D0E /* Build configuration list for PBXNativeTarget "NetMapUITests" */;
+			buildConfigurationList = 11450D3D307C1C7B009F0D0E /* Build configuration list for PBXNativeTarget "DeltaWiFiUITests" */;
 			buildPhases = (
 				11450D2B307C1C7B009F0D0E /* Sources */,
 				11450D2C307C1C7B009F0D0E /* Frameworks */,
@@ -142,11 +142,11 @@
 				11450D31307C1C7B009F0D0E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				11450D32307C1C7B009F0D0E /* NetMapUITests */,
+				11450D32307C1C7B009F0D0E /* DeltaWiFiUITests */,
 			);
-			name = NetMapUITests;
-			productName = NetMapUITests;
-			productReference = 11450D2F307C1C7B009F0D0E /* NetMapUITests.xctest */;
+			name = DeltaWiFiUITests;
+			productName = DeltaWiFiUITests;
+			productReference = 11450D2F307C1C7B009F0D0E /* DeltaWiFiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -172,7 +172,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 11450D13307C1C79009F0D0E /* Build configuration list for PBXProject "NetMap" */;
+			buildConfigurationList = 11450D13307C1C79009F0D0E /* Build configuration list for PBXProject "DeltaWiFi" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -186,9 +186,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				11450D17307C1C79009F0D0E /* NetMap */,
-				11450D24307C1C7B009F0D0E /* NetMapTests */,
-				11450D2E307C1C7B009F0D0E /* NetMapUITests */,
+				11450D17307C1C79009F0D0E /* DeltaWiFi */,
+				11450D24307C1C7B009F0D0E /* DeltaWiFiTests */,
+				11450D2E307C1C7B009F0D0E /* DeltaWiFiUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,18 +232,18 @@
 /* Begin PBXTargetDependency section */
 		11450D27307C1C7B009F0D0E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 11450D17307C1C79009F0D0E /* NetMap */;
+			target = 11450D17307C1C79009F0D0E /* DeltaWiFi */;
 			targetProxy = 11450D26307C1C7B009F0D0E /* PBXContainerItemProxy */;
 		};
 		11450D31307C1C7B009F0D0E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 11450D17307C1C79009F0D0E /* NetMap */;
+			target = 11450D17307C1C79009F0D0E /* DeltaWiFi */;
 			targetProxy = 11450D30307C1C7B009F0D0E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		11450D35307C1C7B009F0D0E /* Debug configuration for PBXProject "NetMap" */ = {
+		11450D35307C1C7B009F0D0E /* Debug configuration for PBXProject "DeltaWiFi" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -307,7 +307,7 @@
 			};
 			name = Debug;
 		};
-		11450D36307C1C7B009F0D0E /* Release configuration for PBXProject "NetMap" */ = {
+		11450D36307C1C7B009F0D0E /* Release configuration for PBXProject "DeltaWiFi" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -363,7 +363,7 @@
 			};
 			name = Release;
 		};
-		11450D38307C1C7B009F0D0E /* Debug configuration for PBXNativeTarget "NetMap" */ = {
+		11450D38307C1C7B009F0D0E /* Debug configuration for PBXNativeTarget "DeltaWiFi" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -372,11 +372,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9LA323LPLP;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -384,7 +386,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.mhs131.NetMap;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = DeltaWiFi;
+				PRODUCT_NAME = "DELTA Wi-Fi Analyzer";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -395,7 +398,7 @@
 			};
 			name = Debug;
 		};
-		11450D39307C1C7B009F0D0E /* Release configuration for PBXNativeTarget "NetMap" */ = {
+		11450D39307C1C7B009F0D0E /* Release configuration for PBXNativeTarget "DeltaWiFi" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -404,11 +407,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9LA323LPLP;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,7 +421,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.mhs131.NetMap;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = DeltaWiFi;
+				PRODUCT_NAME = "DELTA Wi-Fi Analyzer";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -427,7 +433,7 @@
 			};
 			name = Release;
 		};
-		11450D3B307C1C7B009F0D0E /* Debug configuration for PBXNativeTarget "NetMapTests" */ = {
+		11450D3B307C1C7B009F0D0E /* Debug configuration for PBXNativeTarget "DeltaWiFiTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -444,11 +450,11 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetMap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NetMap";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DELTA Wi-Fi Analyzer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DELTA Wi-Fi Analyzer";
 			};
 			name = Debug;
 		};
-		11450D3C307C1C7B009F0D0E /* Release configuration for PBXNativeTarget "NetMapTests" */ = {
+		11450D3C307C1C7B009F0D0E /* Release configuration for PBXNativeTarget "DeltaWiFiTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -465,11 +471,11 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetMap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NetMap";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DELTA Wi-Fi Analyzer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DELTA Wi-Fi Analyzer";
 			};
 			name = Release;
 		};
-		11450D3E307C1C7B009F0D0E /* Debug configuration for PBXNativeTarget "NetMapUITests" */ = {
+		11450D3E307C1C7B009F0D0E /* Debug configuration for PBXNativeTarget "DeltaWiFiUITests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -484,11 +490,11 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = NetMap;
+				TEST_TARGET_NAME = DeltaWiFi;
 			};
 			name = Debug;
 		};
-		11450D3F307C1C7B009F0D0E /* Release configuration for PBXNativeTarget "NetMapUITests" */ = {
+		11450D3F307C1C7B009F0D0E /* Release configuration for PBXNativeTarget "DeltaWiFiUITests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -503,42 +509,42 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = NetMap;
+				TEST_TARGET_NAME = DeltaWiFi;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11450D13307C1C79009F0D0E /* Build configuration list for PBXProject "NetMap" */ = {
+		11450D13307C1C79009F0D0E /* Build configuration list for PBXProject "DeltaWiFi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11450D35307C1C7B009F0D0E /* Debug configuration for PBXProject "NetMap" */,
-				11450D36307C1C7B009F0D0E /* Release configuration for PBXProject "NetMap" */,
+				11450D35307C1C7B009F0D0E /* Debug configuration for PBXProject "DeltaWiFi" */,
+				11450D36307C1C7B009F0D0E /* Release configuration for PBXProject "DeltaWiFi" */,
 			);
 			defaultConfigurationName = Release;
 		};
-		11450D37307C1C7B009F0D0E /* Build configuration list for PBXNativeTarget "NetMap" */ = {
+		11450D37307C1C7B009F0D0E /* Build configuration list for PBXNativeTarget "DeltaWiFi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11450D38307C1C7B009F0D0E /* Debug configuration for PBXNativeTarget "NetMap" */,
-				11450D39307C1C7B009F0D0E /* Release configuration for PBXNativeTarget "NetMap" */,
+				11450D38307C1C7B009F0D0E /* Debug configuration for PBXNativeTarget "DeltaWiFi" */,
+				11450D39307C1C7B009F0D0E /* Release configuration for PBXNativeTarget "DeltaWiFi" */,
 			);
 			defaultConfigurationName = Release;
 		};
-		11450D3A307C1C7B009F0D0E /* Build configuration list for PBXNativeTarget "NetMapTests" */ = {
+		11450D3A307C1C7B009F0D0E /* Build configuration list for PBXNativeTarget "DeltaWiFiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11450D3B307C1C7B009F0D0E /* Debug configuration for PBXNativeTarget "NetMapTests" */,
-				11450D3C307C1C7B009F0D0E /* Release configuration for PBXNativeTarget "NetMapTests" */,
+				11450D3B307C1C7B009F0D0E /* Debug configuration for PBXNativeTarget "DeltaWiFiTests" */,
+				11450D3C307C1C7B009F0D0E /* Release configuration for PBXNativeTarget "DeltaWiFiTests" */,
 			);
 			defaultConfigurationName = Release;
 		};
-		11450D3D307C1C7B009F0D0E /* Build configuration list for PBXNativeTarget "NetMapUITests" */ = {
+		11450D3D307C1C7B009F0D0E /* Build configuration list for PBXNativeTarget "DeltaWiFiUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11450D3E307C1C7B009F0D0E /* Debug configuration for PBXNativeTarget "NetMapUITests" */,
-				11450D3F307C1C7B009F0D0E /* Release configuration for PBXNativeTarget "NetMapUITests" */,
+				11450D3E307C1C7B009F0D0E /* Debug configuration for PBXNativeTarget "DeltaWiFiUITests" */,
+				11450D3F307C1C7B009F0D0E /* Release configuration for PBXNativeTarget "DeltaWiFiUITests" */,
 			);
 			defaultConfigurationName = Release;
 		};

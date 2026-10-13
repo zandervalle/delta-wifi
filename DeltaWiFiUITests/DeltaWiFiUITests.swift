@@ -1,13 +1,13 @@
 //
-//  NetMapUITests.swift
-//  NetMapUITests
+//  DeltaWiFiUITests.swift
+//  DeltaWiFiUITests
 //
 //  Created by Alexander on 11.10.26.
 //
 
 import XCTest
 
-final class NetMapUITests: XCTestCase {
+final class DeltaWiFiUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -1,0 +1,5 @@
+# Lokale Testdaten und Auszüge aus dem Heimnetz (Namen, Adressen, Rufnummern)
+Testdaten/
+
+# macOS
+.DS_Store
