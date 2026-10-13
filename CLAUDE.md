@@ -1,6 +1,6 @@
 # DELTA Wi-Fi Analyzer (macOS-App)
 
-Name der App: **DELTA Wi-Fi Analyzer** (Difference Evaluation of Latency, Throughput & Attenuation), Repository `delta-wifi`. Xcode-Projekt, Target, Scheme und Swift-Modul heißen `DeltaWiFi`. Der frühere Name NetMap lebt nur in den Bundle-IDs (`de.mhs131.NetMap…`) und in der Typkennung `de.mhs131.netmap.wlanprojekt` weiter; beide bleiben bewusst unverändert, damit vorhandene Projektdateien und Freigaben gültig bleiben.
+Name der App: **DELTA Wi-Fi Analyzer** (Difference Evaluation of Latency, Throughput & Attenuation), Repository `delta-wifi`. Xcode-Projekt, Target, Scheme und Swift-Modul heißen `DeltaWiFi`. Die Mac-App liegt im Ordner `macOS/` (Xcode-Projekt, Quelltexte, Tests, `Info.plist`, `Tools/`), die Windows-App in `windows/`. Der frühere Name NetMap lebt nur in den Bundle-IDs (`de.mhs131.NetMap…`) und in der Typkennung `de.mhs131.netmap.wlanprojekt` weiter; beide bleiben bewusst unverändert, damit vorhandene Projektdateien und Freigaben gültig bleiben.
 
 Native macOS-App (Swift/SwiftUI), mit der Alex das WLAN im Haus seiner Eltern **vor und nach einem Netzumbau** ausmisst und den Unterschied als Heatmap auf Grundrissen zeigt. Alle Messungen entstehen in der App selbst. Die früher geplanten Bash-Skripte (`wlan-messung.sh`, `wlan-logger.sh`) und die Web-Messkarte wurden nie eingesetzt; einen Import ihrer Dateien gibt es deshalb nicht (er war gebaut und wurde wieder entfernt).
 
@@ -136,7 +136,7 @@ Dieselbe App für Windows 10/11: **C# mit WPF auf .NET 10**, keine Fremdabhängi
 
 ## Bauen und Arbeiten
 
-- Nach jeder Änderung bauen und Fehler sofort beheben:
+- Nach jeder Änderung bauen und Fehler sofort beheben (im Ordner `macOS/`):
   ```
   xcodebuild -project <Name>.xcodeproj -scheme <Name> -configuration Debug -destination 'platform=macOS' build
   ```

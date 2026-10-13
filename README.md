@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="DeltaWiFi/Assets.xcassets/AppIcon.appiconset/icon-256.png" width="128" alt="DELTA Wi-Fi Analyzer icon">
+  <img src="macOS/DeltaWiFi/Assets.xcassets/AppIcon.appiconset/icon-256.png" width="128" alt="DELTA Wi-Fi Analyzer icon">
 </p>
 
 # DELTA Wi-Fi Analyzer
@@ -66,17 +66,18 @@ There are no third-party dependencies.
 
 There is no prebuilt download. Build it from source:
 
-1. Clone the repository and open `DeltaWiFi.xcodeproj` in Xcode.
+1. Clone the repository and open `macOS/DeltaWiFi.xcodeproj` in Xcode.
 2. Select your own team under *Signing & Capabilities*. The project is configured for the author's development team.
 3. Build and run the `DeltaWiFi` scheme.
 
 Or from the command line:
 
 ```sh
+cd macOS
 xcodebuild -project DeltaWiFi.xcodeproj -scheme DeltaWiFi -configuration Debug -destination 'platform=macOS' build
 ```
 
-To run the unit tests:
+To run the unit tests, also from `macOS/`:
 
 ```sh
 xcodebuild -project DeltaWiFi.xcodeproj -scheme DeltaWiFi -destination 'platform=macOS' test -only-testing:DeltaWiFiTests
@@ -198,12 +199,12 @@ Positions are relative to the plan (0 to 1), times are milliseconds since the ep
 
 | Folder | Contents |
 |---|---|
-| `DeltaWiFi/Model` | The project document and its JSON format |
-| `DeltaWiFi/Logic` | Pure, tested functions: interpolation, colour scale, metrics, summaries, parsing of tool output |
-| `DeltaWiFi/Services` | Everything that touches the system: CoreWLAN, child processes, location access, the measurement and walk recorders |
-| `DeltaWiFi/Views` | SwiftUI views |
-| `DeltaWiFiTests` | Unit tests for the model and logic (Swift Testing) |
-| `Tools/AppIcon.swift` | The script that draws the app icon |
+| `macOS/DeltaWiFi/Model` | The project document and its JSON format |
+| `macOS/DeltaWiFi/Logic` | Pure, tested functions: interpolation, colour scale, metrics, summaries, parsing of tool output |
+| `macOS/DeltaWiFi/Services` | Everything that touches the system: CoreWLAN, child processes, location access, the measurement and walk recorders |
+| `macOS/DeltaWiFi/Views` | SwiftUI views |
+| `macOS/DeltaWiFiTests` | Unit tests for the model and logic (Swift Testing) |
+| `macOS/Tools/AppIcon.swift` | The script that draws the app icon |
 | `windows/` | The Windows port (C#, WPF) with its own tests |
 
 The app is a SwiftUI `DocumentGroup` app. The logic is kept free of UI and hardware so that it can be tested. The parts that depend on hardware (CoreWLAN, real pings, permissions) can only be checked on a Mac with a live Wi-Fi connection.
