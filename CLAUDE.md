@@ -109,6 +109,31 @@ Gewählte Messgröße, Grenzwerte für die Farbskala (gut / okay / kritisch):
 
 - Zusätzlich darf die App die Messhistorie (alle Wiederholungen) speichern. Die Felder oben müssen beim Lesen und Schreiben kompatibel bleiben.
 
+## Windows-Pendant (`windows/`)
+
+Dieselbe App für Windows 10/11: **C# mit WPF auf .NET 10**, keine Fremdabhängigkeiten in der App (nur xUnit im Test-Projekt). Funktionen, Grenzwerte, Heatmap und Dateiformat sind identisch; beide Apps öffnen dieselben `.wlanprojekt`-Dateien. Änderungen an Logik oder Format bitte immer in beiden Apps nachziehen.
+
+- **Aufbau wie in der Mac-App:** `windows/DeltaWiFi/` mit `Model` (Projekt, JSON), `Logic` (reine, getestete Funktionen), `Services` (WLAN, Ping, Speedtest, iperf3, Messablauf, Lauf-Rekorder), `Views` (WPF). Tests in `windows/DeltaWiFi.Tests`.
+- **Oberfläche:** Ein Fenster je Projekt. `MainWindow.Refresh()` bringt nach jeder Änderung die ganze Anzeige auf den Stand des Projekts; Änderungen laufen über `MainWindow.Edit(...)` und sind damit widerrufbar (Strg+Z). Hell-/Dunkelmodus über das Fluent-Thema von WPF (`ThemeMode="System"`), eigene Farben ohne feste Hell-/Dunkelwerte (siehe `Views/Ui.cs`).
+- **Funkwerte über `wlanapi.dll`** (`Services/WiFi.cs`): `WlanQueryInterface` mit `current_connection` (SSID, BSSID, PHY, Link-Rate), `realtime_connection_quality` (ab Windows 11 24H2: RSSI, Frequenz) und als Rückfall `rssi` bzw. die BSS-Liste.
+  - **Kein Rauschpegel, also kein SNR:** Windows liefert ihn nicht. `noise_dbm` und `snr_db` bleiben bei Windows-Messungen leer.
+  - **Kanalbreite** melden die meisten Treiber nicht; sie wird aus den Information Elements des Beacons gelesen (`RadioChannel.Width`: HT-, VHT-, im 6-GHz-Band HE-Operation).
+  - **Ortungsfreigabe:** Ohne „Ortungsdienste“ für Desktop-Apps verweigert Windows SSID und BSSID (`ERROR_ACCESS_DENIED`). Dann weiter messen und im Messpanel darauf hinweisen (Knopf öffnet `ms-settings:privacy-location`).
+- **Ping:** `IcmpSendEcho2Ex` aus `iphlpapi.dll` mit der IP-Adresse des WLAN-Adapters als Absender, 60 Anfragen im Sekundentakt, Wartezeit je Anfrage 4 s. Kein Aufruf von `ping.exe`, weil dessen Ausgabe von der Systemsprache abhängt.
+- **Gateway und WLAN-IP:** aus `NetworkInterface` des Adapters (über seine GUID), Fallback `192.168.178.1`.
+- **Internet-Speedtest:** eingebaut statt `networkQuality`: vier parallele HTTP-Ströme gegen `speed.cloudflare.com` (`__down` / `__up`), 8 s je Richtung, die ersten 2 s zählen nicht. Die Werte sind mit denen vom Mac nur grob vergleichbar.
+- **iperf3:** wie am Mac (`-c <server> -B <wlan-ip> -t 10 -P 4 [-R] -J`); gesucht wird `iperf3.exe` neben der App, im `PATH` und in den WinGet-Verknüpfungen.
+- **Grundrisse:** WPF-Imaging (WIC). JPG und PNG immer, HEIC nur mit installierter HEIF-Bilderweiterung.
+- **Einstellungen** (Speedtest an/aus, iperf3-Server, Laufwege zeigen): `%APPDATA%\DeltaWiFi\settings.json`.
+- **Bauen und testen** (im Ordner `windows/`, .NET 10 SDK nötig, kein Visual Studio):
+  ```
+  dotnet build
+  dotnet test
+  dotnet run --project DeltaWiFi
+  dotnet publish DeltaWiFi -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true
+  ```
+- **Hardware-abhängig und nur am Gerät prüfbar:** `Services/WiFi.cs`, `Pinger.cs`, `SpeedTest.cs`, iperf3 und die Ortungsfreigabe.
+
 ## Bauen und Arbeiten
 
 - Nach jeder Änderung bauen und Fehler sofort beheben:

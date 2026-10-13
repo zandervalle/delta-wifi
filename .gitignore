@@ -3,3 +3,9 @@ Testdaten/
 
 # macOS
 .DS_Store
+
+# Windows / .NET
+bin/
+obj/
+.vs/
+*.user

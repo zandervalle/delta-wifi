@@ -4,7 +4,7 @@
 
 # DELTA Wi-Fi Analyzer
 
-A native macOS app that measures a home Wi-Fi network **before and after a change** and shows the difference as a heatmap on your floor plans.
+A native macOS app that measures a home Wi-Fi network **before and after a change** and shows the difference as a heatmap on your floor plans. A [Windows version](#windows-version) lives in the same repository.
 
 DELTA stands for *Difference Evaluation of Latency, Throughput & Attenuation*. Most Wi-Fi tools show signal strength. This one also measures what people actually complain about: packet loss, latency spikes, and real throughput, per room, and then compares two states of the network against each other.
 
@@ -93,6 +93,41 @@ Enter the server's IP address in the measurement panel. A Raspberry Pi 4 on a ca
 
 Use a dedicated machine for this. The iperf server built into some routers speaks iperf 2 and does not work with the app.
 
+## Windows version
+
+The folder `windows/` holds a port for Windows 10 and 11, written in C# with WPF on .NET 10. It reads and writes the same `.wlanprojekt` files, so a project started on the Mac can be continued on a Windows notebook and the other way round. Floor plans, points, phases, walk surveys, heatmaps, comparison, and analysis work the same way.
+
+### Build and run on Windows
+
+You need the [.NET 10 SDK](https://dotnet.microsoft.com/download). Visual Studio is not required.
+
+```sh
+cd windows
+dotnet run --project DeltaWiFi            # build and start
+dotnet test                               # unit tests
+dotnet publish DeltaWiFi -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true
+```
+
+The last command produces a single `DeltaWiFi.exe` of about 0.5 MB that needs the .NET 10 Desktop Runtime on the target machine. To open a project by double-click, choose *Open with* once and pick the exe; the app takes the file path as its argument.
+
+### What differs from the Mac
+
+| Topic | macOS | Windows |
+|---|---|---|
+| Radio values | CoreWLAN | Native Wifi API (`wlanapi.dll`) |
+| Noise and SNR | Measured | **Not available.** Windows does not report a noise floor, so SNR stays empty for measurements taken on Windows. |
+| Channel width | Reported by the system | Read from the access point's beacon, because most drivers do not report it. It is the width the access point transmits with. |
+| Ping | `/sbin/ping` | ICMP through the Windows API, 60 requests at 1 s intervals, sent from the Wi-Fi adapter's address. A reply counts if it arrives within 4 s. |
+| Internet speed test | Apple's `networkQuality` | Built in: four parallel HTTP streams to `speed.cloudflare.com`, 8 s per direction, the first 2 s are not counted. |
+| Local throughput | `iperf3` from Homebrew | `iperf3.exe` from [iperf.fr](https://iperf.fr), placed in the `PATH` or next to the app |
+| Network name and BSSID | Need Location Services | Need location access for desktop apps (*Settings › Privacy & security › Location*) |
+| HEIC floor plans | Supported | Only with the *HEIF Image Extensions* from the Microsoft Store |
+| Settings | macOS defaults | `%APPDATA%\DeltaWiFi\settings.json` |
+
+**Keep one platform per comparison where you can.** Signal strength, link rate, ping, and iperf3 are comparable between a Mac and a Windows notebook only as far as the two Wi-Fi adapters are. The internet speed test uses a different method on each platform, so a "before" measured on the Mac and an "after" measured on Windows do not make a fair pair for that metric.
+
+The Windows code follows the same layout as the Mac code: `Model`, `Logic`, `Services`, and `Views` under `windows/DeltaWiFi`, and the tests in `windows/DeltaWiFi.Tests` (xUnit).
+
 ## Permissions
 
 macOS asks for two permissions on first launch:
@@ -123,7 +158,7 @@ Some things learned the hard way:
 
 ## Limitations
 
-- **macOS only.** The app relies on CoreWLAN, which has no equivalent on iOS.
+- **macOS and Windows only.** The Mac app relies on CoreWLAN, which has no equivalent on iOS. The Windows port is described under [Windows version](#windows-version).
 - **German interface only.**
 - **Noise values from macOS are sometimes wrong.** CoreWLAN occasionally reports a noise floor such as −17 dBm, which would be louder than the signal. The app discards noise values outside −110 to −75 dBm, so the SNR is missing for those samples.
 - **Single ping spikes are not always the network's fault.** The Mac itself can cause an occasional spike of up to a few hundred milliseconds. Packet loss and multi-second stalls are the more reliable evidence.
@@ -169,6 +204,7 @@ Positions are relative to the plan (0 to 1), times are milliseconds since the ep
 | `DeltaWiFi/Views` | SwiftUI views |
 | `DeltaWiFiTests` | Unit tests for the model and logic (Swift Testing) |
 | `Tools/AppIcon.swift` | The script that draws the app icon |
+| `windows/` | The Windows port (C#, WPF) with its own tests |
 
 The app is a SwiftUI `DocumentGroup` app. The logic is kept free of UI and hardware so that it can be tested. The parts that depend on hardware (CoreWLAN, real pings, permissions) can only be checked on a Mac with a live Wi-Fi connection.
 

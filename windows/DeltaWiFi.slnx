@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DeltaWiFi.Tests/DeltaWiFi.Tests.csproj" />
+  <Project Path="DeltaWiFi/DeltaWiFi.csproj" />
+</Solution>

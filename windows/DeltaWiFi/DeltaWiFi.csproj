@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>DeltaWiFi</RootNamespace>
+    <AssemblyName>DeltaWiFi</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <Product>DELTA Wi-Fi Analyzer</Product>
+    <Version>1.0.0</Version>
+    <SatelliteResourceLanguages>de</SatelliteResourceLanguages>
+    <!-- Application.ThemeMode (Hell/Dunkel nach System) gilt in WPF noch als experimentell. -->
+    <NoWarn>$(NoWarn);WPF0001</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\app.ico" />
+    <Using Include="System.IO" />
+  </ItemGroup>
+
+</Project>
