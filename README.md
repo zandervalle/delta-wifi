@@ -55,8 +55,8 @@ If you enter the synchronised rate of your internet connection in the project, t
 
 ## Requirements
 
-- macOS 27 or later
-- Xcode 27 to build
+- macOS 15 or later. The app is developed and used on macOS 27; on macOS 15 and 26 it builds but has not been run.
+- Xcode 27 to build. Older Xcode versions are untested.
 - A Mac with Wi-Fi
 - Optional: [`iperf3`](https://iperf.fr) from Homebrew for local throughput, plus a second machine on a LAN cable running `iperf3 -s`
 

@@ -70,7 +70,7 @@ Gewählte Messgröße, Grenzwerte für die Farbskala (gut / okay / kritisch):
 
 ## Technik
 
-- **SwiftUI**, Mindestziel die installierte macOS-Version. Keine Fremdabhängigkeiten.
+- **SwiftUI**, Mindestziel **macOS 15.0** (die Grenze des Codes liegt bei 14.4 wegen `TableColumnForEach`; entwickelt und geprüft wird auf macOS 27). Keine Fremdabhängigkeiten.
 - **Funkwerte über CoreWLAN:** `CWWiFiClient.shared().interface()` mit `rssiValue()`, `noiseMeasurement()`, `transmitRate()`, `wlanChannel()` (Nummer, Band, Breite), `activePHYMode()`, `bssid()`, `ssid()`, `interfaceName`.
 - **BSSID/SSID** liefert macOS nur mit **Ortungsfreigabe**:
   - `CLLocationManager` beim Start anfragen.
